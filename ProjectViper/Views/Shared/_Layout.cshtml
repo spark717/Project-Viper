@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar">
+        @Html.ActionLink("Tag list", "TagLIst", "Home", null, new { @class= "navbar-link" })
+        @Html.ActionLink("File manager", "FileBrowser", "FileManager", null, new { @class = "navbar-link" })
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>

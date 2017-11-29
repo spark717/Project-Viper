@@ -1,0 +1,56 @@
+﻿body {
+    background-color: black;
+    color:white;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color:white;
+}
+
+a:hover{
+    color:red;
+}
+
+.navbar-link {
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.navbar-link:link, .navbar-link:visited { 
+    background-color: black;
+}
+
+.navbar-link:hover {
+    color:white;
+    background-color: red;
+}
+
+.navbar {
+    display: block;
+    padding:10px;
+    width: 100%;
+    background-color: orange;
+}
+
+.file-link{
+    display:block;
+    padding: 1px;
+}
+
+.dirbar-item{
+    display:inline-block;
+    padding: 10px 10px;
+    background-color:green;
+    margin-right:2px;
+    margin-top:2px;
+}
+
+.dirbar-item:hover{
+    background-color: red;
+    cursor:pointer;
+}

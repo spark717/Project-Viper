@@ -1,0 +1,14 @@
+﻿@model ProjectViper.Models.ViewModels.FileBrowserViewModel
+
+@{
+    ViewBag.Title = "FileBrowser";
+}
+
+<h1>File browser</h1>
+
+<div id="dirbar"></div>
+
+<table id="file-browser"></table>
+
+@Scripts.Render("~/scripts/jquery-1.10.2.min.js")
+@Scripts.Render("~/scripts/site/FileBrowser.js")

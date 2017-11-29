@@ -1,0 +1,39 @@
+﻿@using ProjectViper.Models.Domain.Entities
+@model IEnumerable<Tag>
+
+@{
+    ViewBag.Title = "Tag list";
+}
+
+<h1>Tag list</h1>
+
+<div>
+    <p>
+        @using (Html.BeginForm("AddTag", "Home", FormMethod.Post))
+        {
+            @:Add tag: 
+            <input type="text" name="Name" value="" />
+            <input type = "submit" value = "Add" />
+        }
+    </p>
+</div>
+
+<table border="1">
+    <tr><th>Tag name</th></tr>
+    @foreach (Tag tag in Model)
+    {
+        <tr>
+            <td>@tag.Name</td>
+            <td>
+                <div>
+                    @using (Html.BeginForm("DeleteTag", "Home", FormMethod.Post))
+                    {
+                        <input type="submit" value="X"/>
+                        <input type="text" name="Name" style="display:none" value="@tag.Name"/>
+                    }
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+

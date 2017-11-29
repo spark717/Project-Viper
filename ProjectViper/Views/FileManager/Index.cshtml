@@ -1,0 +1,21 @@
+﻿@using ProjectViper.Models.Domain.Concrete
+@model ProjectViper.Models.Domain.Concrete.FileInfo
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>File manager</h1>
+@*<h2>@Model.Path</h2>
+
+<table>
+    @foreach (var file in Model.ChildrenDirs)
+    {
+        <tr><td>@Html.ActionLink(file.Name, "Index", "FileManager", new { file.Path}, null)</td></tr>
+    }
+
+    @foreach (var file in Model.ChildrenFiles)
+    {
+        <tr><td>@Html.ActionLink(file.Name, "Index", "FileManager", new { file.Path }, null)</td></tr>
+    }
+</table>*@
